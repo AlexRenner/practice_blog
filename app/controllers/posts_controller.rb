@@ -9,4 +9,10 @@ class PostsController < ApplicationController
 		render 'posts/show'
 	end
 
+	def create
+		@post = Post.new()
+		render 'posts/create'
+	end
+
+
 end

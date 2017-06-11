@@ -1,5 +1,5 @@
 <h2>Posts Page</h2>
-<%= link_to "Create", "posts/create" %> 
+<%= link_to "Create", "posts/new" %> 
 
 <% @posts.each do |post| %>
 	<h4><%= post.title %><h4><span><%= post.created_at %></span>
