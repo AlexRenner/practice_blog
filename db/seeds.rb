@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+20.times{ Post.create(title: Faker::Zelda.game, content: Faker::Hipster.paragraph(3)) }
+
+60.times{ Comment.create(content: Faker::Hipster.paragraph(3), post_id: rand(20)) }
