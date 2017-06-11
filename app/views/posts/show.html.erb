@@ -2,9 +2,11 @@
 
 <% @posts.each do |post| %>
 	<h4><%= post.title %><h4><span><%= post.created_at %></span>
+	<p>Post: <%= post.content %></p>
 	<% if post.comments != nil %>
 		<% post.comments.each do |comment| %>
-			<p><%= comment.content %></p><span><%= comment.created_at %></span>
+			<p style="color: grey;">     Comment: <%= comment.content %></p><span><%= comment.created_at %></span>
 		<% end %>
 	<% end %>
+	<hr>
 <% end %>
