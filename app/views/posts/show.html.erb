@@ -1,0 +1,10 @@
+<h2>Posts Page</h2>
+
+<% @posts.each do |post| %>
+	<h4><%= post.title %><h4><span><%= post.created_at %></span>
+	<% if post.comments != nil %>
+		<% post.comments.each do |comment| %>
+			<p><%= comment.content %></p><span><%= comment.created_at %></span>
+		<% end %>
+	<% end %>
+<% end %>
